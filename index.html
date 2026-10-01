@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#120e0c">
+<title>HollowRust — Metroidvania 2D en pixel art</title>
+<meta name="description" content="HollowRust: un caballero reanimado explora las tumbas de una civilización mecánica muerta. Metroidvania 2D en pixel art hecho con Godot 4.">
+<meta property="og:title" content="HollowRust">
+<meta property="og:description" content="Metroidvania 2D en pixel art. 10 capítulos, parry, toxina y núcleos de óxido.">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="icon" href="img/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav><div class="w">
+  <a class="brand" href="#top"><img src="img/logo.png" alt="Logo de HollowRust" class="px">HOLLOWRUST</a>
+  <div class="links" id="menu"><a href="#juego">El juego</a><a href="#descargar">Descargar</a><a href="#bestiario">Bestiario</a><a href="#galeria">Galería</a><a href="#capitulos">Capítulos</a><a href="#historia">Historia</a><a href="#creditos">Créditos</a></div>
+  <button id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
+</div></nav>
+
+<header class="hero" id="top"><div class="w">
+  <img class="logo px" src="img/logo.png" alt="">
+  <div class="tag">Metroidvania 2D · Pixel art · Godot 4.7</div>
+  <h1>Hollow<span>Rust</span></h1>
+  <p>Un caballero reanimado entre montañas de chatarra carga una espada dentada demasiado pesada y explora las tumbas de una civilización mecánica muerta.</p>
+  <a class="btn" href="#descargar">Descargar para PC</a><a class="btn o" href="#juego">Conoce el juego</a>
+</div></header>
+
+<section id="juego"><div class="w">
+  <h2>El juego</h2>
+  <p class="sub">Tres ideas sostienen todo el diseño: una espada que devuelve el peligro, un veneno que también es combustible y núcleos que cambian cómo te mueves.</p>
+  <div class="grid">
+    <div class="c"><h3>Tajo y parry</h3><p>Combo de 3 golpes. No hay botón de bloqueo: si tu tajo alcanza un proyectil en sus fotogramas activos, se lo devuelves al enemigo.</p></div>
+    <div class="c"><h3>Toxina</h3><p>Cuanta más acumulas, más afilada es la hoja, pero al llenarse te quema. Filtros y santuarios la reducen.</p></div>
+    <div class="c"><h3>Núcleos de óxido</h3><p>Horno (funde puertas), Garfio (cable) y Ascua (doble salto). Dos núcleos juntos activan una técnica combinada.</p></div>
+    <div class="c"><h3>Mundo vivo</h3><p>Ciclo día/noche de unos 20 minutos, lluvia, niebla, viento de ascuas y guardado en nidos de ascuas.</p></div>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="c"><div class="n">10</div><p>capítulos, con dos finales en el primero</p></div>
+    <div class="c"><div class="n">7+2</div><p>tipos de enemigo y jefes por fases</p></div>
+    <div class="c"><div class="n">99</div><p>scripts GDScript, ~16.300 líneas</p></div>
+    <div class="c"><div class="n">363</div><p>pruebas automáticas, todas verdes</p></div>
+  </div>
+</div></section>
+
+<section id="descargar"><div class="w">
+  <h2>Descargar</h2>
+  <p class="sub">HollowRust es un juego de PC. Descárgalo desde itch.io y sigue las instrucciones de su página.</p>
+  <div class="dl">
+    <div class="c">
+      <h3>HollowRust para PC</h3>
+      <p id="dl-info">Disponible en itch.io</p>
+      <div class="acts">
+        <a class="btn" id="dl-btn" href="https://yovany-calderon.itch.io/hollowrust" rel="noopener" target="_blank">Descargar en itch.io</a>
+        <button class="btn o" id="dl-share" type="button">Enviarme el enlace</button>
+      </div>
+      <p id="dl-note" class="note" hidden>Estás en un móvil: el juego es para PC. Toca «Enviarme el enlace» para abrirlo después en tu computadora.</p>
+    </div>
+    <div class="c">
+      <h3>Controles</h3>
+      <table>
+        <tr><td><kbd>A</kbd> <kbd>D</kbd></td><td>Mover</td></tr>
+        <tr><td><kbd>Espacio</kbd></td><td>Saltar</td></tr>
+        <tr><td><kbd>Shift</kbd></td><td>Impulso</td></tr>
+        <tr><td><kbd>J</kbd></td><td>Tajo (3 golpes)</td></tr>
+        <tr><td><kbd>E</kbd></td><td>Interactuar</td></tr>
+        <tr><td><kbd>F</kbd></td><td>Garfio</td></tr>
+      </table>
+    </div>
+  </div>
+</div></section>
+
+<section id="bestiario"><div class="w">
+  <h2>Bestiario</h2>
+  <p class="sub">Los habitantes de las ruinas, animados con los fotogramas reales del juego.</p>
+  <div class="grid" id="bestiary"></div>
+  <noscript><p class="sub">Activa JavaScript para ver el bestiario animado.</p></noscript>
+</div></section>
+
+<section id="galeria"><div class="w">
+  <h2>Galería</h2>
+  <p class="sub">Toca una imagen para verla en grande.</p>
+  <div class="gal">
+    <button data-full="img/hero.jpg"><img src="img/t-hero.jpg" width="640" height="360" alt="El caballero sobre un puente entre engranajes y cadenas" loading="lazy"><span>Arte de portada: el puente sobre la forja</span></button>
+    <button data-full="img/keyart-2.jpg"><img src="img/t-keyart2.jpg" width="640" height="360" alt="Segunda versión del arte de portada" loading="lazy"><span>Arte de portada, variante</span></button>
+    <button data-full="img/escena.jpg"><img class="px" src="img/t-escena.jpg" width="640" height="360" alt="Fondo industrial del juego compuesto por capas de parallax" loading="lazy"><span>Fondo industrial en capas de parallax</span></button>
+  </div>
+</div></section>
+
+<section id="capitulos"><div class="w">
+  <h2>Los 10 capítulos</h2>
+  <p class="sub">La ruta principal se completa con salto, impulso y Forja Ardiente. Garfio y doble salto son exploración opcional.</p>
+  <ol class="ch">
+    <li><div>Galería del Ácido<small>Tutorial, primer jefe y elección de final</small></div></li>
+    <li><div>Cripta de la Campana Hundida</div></li>
+    <li><div>Calles de la Ciudad Oxidada</div></li>
+    <li><div>Patio del Templo</div></li>
+    <li><div>Taller de Engranajes</div></li>
+    <li><div>Cementerio bajo la lluvia nocturna</div></li>
+    <li><div>Campanario<small>Cuatro elevadores y tres nidos de ascuas</small></div></li>
+    <li><div>Abismo de Escoria Fundida</div></li>
+    <li><div>Murallas de la Ciudad Oxidada</div></li>
+    <li><div>Corazón de la Forja<small>Jefe final en dos fases</small></div></li>
+  </ol>
+</div></section>
+
+<section id="historia"><div class="w">
+  <h2>Historia de creación</h2>
+  <p class="sub">Solo aparece lo que el repositorio puede probar. Las etapas punteadas están por completar.</p>
+  <div class="tl">
+    <div class="ev p"><div class="d">2024</div><h3>El origen · por completar</h3><p>Cómo nació la idea, primeros prototipos y aprendizaje de Godot.</p></div>
+    <div class="ev p"><div class="d">2025</div><h3>Formación y prototipos · por completar</h3><p>Herramientas probadas, cambios de rumbo y decisiones técnicas.</p></div>
+    <div class="ev"><div class="d">2026 · sin fecha exacta</div><h3>Concepto, GDD y prototipo</h3><p>Cadena de cinco documentos (ancla visual, GDD, arte, programación, audio), Godot 4 con GDScript y un mundo de 640×360. Primer prototipo con material provisional de Kenney.</p></div>
+    <div class="ev"><div class="d">2026 · sin fecha exacta</div><h3>Pulido de combate y atmósfera</h3><p>Arco visual del tajo, partículas, sacudida de pantalla, parallax y alertas de vida en el HUD.</p></div>
+    <div class="ev"><div class="d">31 ago 2026</div><h3>Arte de personajes</h3><p>Se comparan candidatos y se elige Fantasy Knight por tener todas las animaciones. Los sprites generados antes por IA se reemplazan por pixel art.</p></div>
+    <div class="ev"><div class="d">5–6 sep 2026</div><h3>Presentación y pantalla</h3><p>Copia de seguridad previa a una reforma grande y validación de resoluciones con escala entera.</p></div>
+    <div class="ev"><div class="d">12 sep 2026</div><h3>Campaña completa y aceptación</h3><p>Diez capítulos, jefe final con segunda fase, 363/363 pruebas y tres recorridos completos solo con entradas normales.</p></div>
+    <div class="ev"><div class="d">sept 2026</div><h3>Localización al español</h3><p>Todo el texto visible traducido, con glosario y créditos de terceros consolidados.</p></div>
+  </div>
+</div></section>
+
+<section id="creditos"><div class="w">
+  <h2>Créditos y transparencia</h2>
+  <p class="sub">Qué es de terceros, qué es del proyecto y dónde se usó IA.</p>
+  <div class="sc"><table>
+    <tr><th>Área</th><th>Origen</th></tr>
+    <tr><td>Personajes</td><td>Fantasy Knight (aamatniekss), Gothicvania (ansimuz), Undead Executioner (Kronovi)</td></tr>
+    <tr><td>Entorno</td><td>Gothicvania e Industrial Parallax (ansimuz)</td></tr>
+    <tr><td>Audio y efectos</td><td>Kenney (CC0), CodeManu, tbbk</td></tr>
+    <tr><td>Tipografías</td><td>Fusion Pixel (TakWolf), Jacquard 24 (Tyler Finck)</td></tr>
+    <tr><td>Propio del proyecto</td><td>Diseño, código de juego, pruebas, herramientas, kit de UI e icono generados por código</td></tr>
+    <tr><td>Asistencia de IA</td><td>GDD y código elaborados con asistencia de IA (documentado en <code>docs/</code>). El arte de portada está generado con IA</td></tr>
+  </table></div>
+</div></section>
+
+<a class="sticky-dl btn" href="#descargar" id="sticky">Descargar para PC</a>
+
+<footer><div class="w">HollowRust · Yovany Calderon · Licencias completas en <code>assets/external/CREDITS.md</code></div></footer>
+
+<div id="lb" aria-hidden="true"><img alt=""></div>
+<script src="js/main.js"></script>
+</body>
+</html>
